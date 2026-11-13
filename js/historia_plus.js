@@ -1,0 +1,221 @@
+/* =========================================================
+   AMPLIACIÓN DE TEMAS CLAVE (mínimo 50 preguntas por tema)
+   Revolución Industrial · Revolución Rusa · Totalitarismos · Primera y
+   Segunda Guerra Mundial · Guerra Fría · Golpe de Estado y dictadura en Chile
+   ADD[tema] = lista de bloques por categoría (mismo orden que en el banco);
+   NEWCAT[tema] = categorías nuevas que se agregan al tema.
+   ========================================================= */
+(function(){
+var ADD={
+ h1ind:[
+  [[1,"¿Qué significa 'revolución' en 'Revolución Industrial'?",["Un cambio profundo y rápido en la forma de producir","Una guerra entre países","Un cambio de rey","El movimiento de rotación de la Tierra"],0],
+   [2,"Antes de las fábricas, ¿dónde se producían muchos tejidos?",["En talleres artesanales y en las casas (sistema doméstico)","En supermercados","En laboratorios","En las minas"],0],
+   [3,"¿Qué ventaja geográfica tenía Gran Bretaña para comerciar?",["Ser una isla con muchos puertos y una gran flota mercante","Estar en el centro de África","No tener costas","Estar en la cordillera de los Andes"],0],
+   [4,"¿De dónde obtenía Gran Bretaña gran parte del algodón para sus fábricas?",["De plantaciones coloniales y del sur de EE.UU., trabajadas muchas veces por personas esclavizadas","De Chile","De la Antártica","De sus propios bosques"],0]],
+  [[1,"¿Qué combustible fósil alimentaba las máquinas de vapor?",["El carbón","El hidrógeno","El uranio","El gas natural licuado"],0],
+   [2,"¿Qué aceleró la máquina 'Spinning Jenny' (1764)?",["La producción de hilo","La producción de pan","La producción de acero","La producción de papel"],0],
+   [3,"¿Qué ingeniero construyó la famosa locomotora 'Rocket' (1829)?",["George Stephenson","James Watt","Thomas Edison","Henry Ford"],0],
+   [4,"¿Qué procedimiento de 1856 permitió producir acero barato en grandes cantidades?",["El convertidor Bessemer","La imprenta de Gutenberg","El telar de Jacquard","El motor eléctrico"],0]],
+  [[1,"¿Qué marcaba el ritmo de trabajo en las fábricas?",["El reloj y las máquinas","El canto de los gallos","Las estaciones del año","El ánimo de cada obrero"],0],
+   [2,"¿Qué le pasaba a un obrero que se accidentaba en el siglo XIX?",["Generalmente quedaba sin trabajo y sin protección","Recibía un seguro completo","Tenía vacaciones pagadas","El Estado le daba una pensión"],0],
+   [3,"¿Por qué las mujeres obreras recibían sueldos más bajos?",["Por discriminación: se pagaba menos a mujeres y niños por el mismo trabajo","Porque la ley les fijaba menos horas","Porque ellas lo pedían","Porque no trabajaban en fábricas"],0],
+   [4,"¿Qué buscaron las primeras leyes fabriles británicas (desde 1833)?",["Limitar el trabajo infantil y la jornada laboral","Prohibir para siempre los sindicatos","Aumentar la jornada a 18 horas","Eliminar los salarios"],0]],
+  [[1,"¿Qué salía de las chimeneas de las fábricas y ennegrecía las ciudades?",["Humo y hollín de carbón","Vapor perfumado","Nubes de lluvia limpia","Polvo de oro"],0],
+   [2,"¿Por qué crecieron barrios obreros junto a las fábricas?",["Porque los obreros debían vivir cerca de su trabajo","Porque eran barrios de lujo","Porque lo exigía la Iglesia","Porque no había fábricas en otros lugares"],0],
+   [3,"¿Qué avances mejoraron la higiene urbana a fines del siglo XIX?",["El alcantarillado y el agua potable","Los celulares","El aire acondicionado","Los rascacielos de vidrio"],0],
+   [4,"¿Qué nueva clase social se formó en las ciudades industriales junto a la burguesía?",["El proletariado","La nobleza feudal","Los siervos de la gleba","Los patricios romanos"],0]],
+  [[2,"¿Qué reclamaba el lema 'ocho horas de trabajo, ocho de descanso y ocho de recreación'?",["La jornada laboral de 8 horas","La jornada de 16 horas","La semana de 3 días","El trabajo nocturno"],0],
+   [3,"¿Qué fue el cartismo en Gran Bretaña?",["Un movimiento obrero que exigía derechos políticos, como el sufragio masculino","Un estilo de pintura","Un club de naipes","Una empresa ferroviaria"],0],
+   [4,"Según Marx, ¿qué clases sociales se enfrentaban en el capitalismo?",["Burguesía y proletariado","Nobles y campesinos","Patricios y plebeyos","Reyes y papas"],0],
+   [5,"¿Qué socialista utópico creó comunidades obreras modelo, como New Lanark?",["Robert Owen","Adam Smith","Napoleón III","Charles Dickens"],0]]
+ ],
+ h2gm1:[
+  [[1,"¿En qué ciudad fue asesinado el archiduque Francisco Fernando?",["Sarajevo","Viena","París","Berlín"],0],
+   [2,"¿De qué imperio era heredero Francisco Fernando?",["Del Imperio austrohúngaro","Del Imperio británico","Del Imperio ruso","Del Imperio otomano"],0],
+   [2,"¿Quién asesinó a Francisco Fernando?",["Gavrilo Princip, un joven nacionalista serbobosnio","Un soldado francés","Un espía británico","Lenin"],0],
+   [3,"¿Qué declaración de guerra inició el conflicto en julio de 1914?",["La de Austria-Hungría a Serbia","La de Francia a Alemania","La de Rusia a Japón","La de Gran Bretaña a Italia"],0],
+   [4,"¿Qué potencias competían en una carrera naval antes de 1914?",["Gran Bretaña y Alemania","Chile y Perú","Suiza y Austria","Japón y China"],0]],
+  [[1,"¿Cómo se llamaba el bando de Alemania y Austria-Hungría?",["Potencias Centrales","Aliados del Pacífico","El Eje","Pacto de Varsovia"],0],
+   [2,"¿Qué imperio se unió a las Potencias Centrales en 1914?",["El Imperio otomano","El Imperio británico","El Imperio japonés","El Imperio inca"],0],
+   [3,"¿Qué plan alemán buscaba derrotar rápido a Francia invadiendo Bélgica?",["El Plan Schlieffen","El Plan Marshall","El Plan Cóndor","El Plan Z"],0],
+   [4,"¿En qué dos grandes frentes se combatió en Europa?",["El frente occidental y el frente oriental","El frente norte y el sur del Pacífico","El frente andino y el amazónico","El frente lunar y el marino"],0],
+   [5,"¿Qué batalla naval de 1914 frente a las costas de Chile enfrentó a británicos y alemanes?",["La batalla de Coronel","La batalla de Trafalgar","El Combate Naval de Iquique","La batalla de Midway"],0]],
+  [[1,"¿Qué era la 'tierra de nadie'?",["El espacio entre las trincheras enemigas","Un país neutral","Un parque de diversiones","Una colonia en África"],0],
+   [2,"¿Qué problemas de salud sufrían los soldados en las trincheras?",["Pie de trinchera, ratas, piojos e infecciones","Insolación tropical","Alergias al polen","Ninguno"],0],
+   [3,"¿Qué famosa tregua ocurrió en diciembre de 1914 en el frente occidental?",["La tregua de Navidad","La tregua del Año Nuevo chino","La tregua de Pascua","La tregua de fiestas patrias"],0],
+   [4,"¿Qué trastorno psicológico sufrían muchos soldados por los bombardeos?",["La 'neurosis de guerra' (shell shock)","La miopía","La gripe","El sonambulismo feliz"],0],
+   [5,"¿Qué batalla de 1916, junto al río Somme, dejó más de un millón de bajas?",["La batalla del Somme","La batalla de Stalingrado","La batalla de Maipú","La batalla de Normandía"],0]],
+  [[1,"¿En qué fecha se firmó el armisticio que puso fin a los combates?",["11 de noviembre de 1918","11 de septiembre de 1973","8 de mayo de 1945","18 de septiembre de 1810"],0],
+   [2,"¿Aproximadamente cuántos soldados murieron en la Primera Guerra Mundial?",["Cerca de 10 millones","Unos mil","Unos cien mil","Ninguno"],0],
+   [3,"¿Qué pandemia golpeó al mundo al final de la guerra (1918)?",["La gripe española","El COVID-19","La peste negra","La viruela del mono"],0],
+   [4,"¿Qué nuevos países surgieron en Europa tras la guerra?",["Polonia, Checoslovaquia y Yugoslavia, entre otros","Brasil y Argentina","Australia y Canadá","India y Pakistán"],0],
+   [5,"¿Qué emperador alemán abdicó en 1918?",["Guillermo II","Francisco José","Nicolás II","Napoleón III"],0]]
+ ],
+ h2tot:[
+  [[1,"¿Qué nuevo medio de comunicación masivo se popularizó en los años veinte?",["La radio","Internet","La televisión a color","El celular"],0],
+   [2,"¿Qué automóvil barato y fabricado en serie popularizó Henry Ford?",["El Ford Modelo T","El Volkswagen Escarabajo","El Tesla","El Fiat 600"],0],
+   [3,"¿Qué país se convirtió en la principal economía del mundo tras la Primera Guerra Mundial?",["Estados Unidos","Gran Bretaña","Alemania","Rusia"],0],
+   [4,"¿Qué grave problema económico vivió Alemania en 1923?",["Una hiperinflación: el dinero perdió casi todo su valor","Un exceso de oro","Pleno empleo","Gran riqueza obrera"],0]],
+  [[1,"¿Cómo se conoce a la crisis económica mundial de los años treinta?",["La Gran Depresión","La Belle Époque","La Guerra Fría","La Revolución Verde"],0],
+   [2,"¿Qué ocurrió con muchos bancos durante la crisis?",["Quebraron y la gente perdió sus ahorros","Multiplicaron sus ganancias","Regalaron dinero","Se convirtieron en escuelas"],0],
+   [3,"¿Qué es el proteccionismo, aplicado por muchos países tras la crisis?",["Subir aranceles para proteger la producción nacional de las importaciones","Proteger animales en peligro","Abrir totalmente las fronteras al comercio","Eliminar los impuestos"],0],
+   [4,"¿Qué presidente chileno cayó en 1931 en medio de la crisis económica?",["Carlos Ibáñez del Campo","Arturo Alessandri","Pedro Aguirre Cerda","Salvador Allende"],0]],
+  [[1,"¿Qué ocurre con la libertad de prensa en un régimen totalitario?",["Se elimina: hay censura","Se fortalece","Se vuelve obligatoria","No cambia"],0],
+   [2,"¿Qué organizaciones usaban los totalitarismos para adoctrinar a los jóvenes?",["Organizaciones juveniles del partido, como las Juventudes Hitlerianas","Centros de estudiantes libres","Clubes de debate independientes","Scouts democráticos"],0],
+   [3,"¿Qué significa 'Estado policial'?",["Un Estado que vigila y reprime a la población mediante la policía y el miedo","Un Estado con muchas comisarías de tránsito","Un Estado sin policía","Un Estado gobernado por bomberos"],0],
+   [4,"¿Qué diferencia a un régimen totalitario de uno autoritario?",["El totalitario busca controlar todos los ámbitos de la vida, incluso el pensamiento","No hay ninguna diferencia","El autoritario tiene elecciones libres","El totalitario respeta los derechos humanos"],0]],
+  [[1,"¿Cómo llamaban los nazis a su Estado?",["Tercer Reich","República de Weimar","Imperio romano","Commonwealth"],0],
+   [2,"¿Qué título usaba Hitler como líder supremo?",["Führer","Duce","Zar","Káiser"],0],
+   [3,"¿Qué título usaba Mussolini?",["Duce","Führer","Káiser","Sha"],0],
+   [4,"¿Qué ocurrió en la 'Noche de los cristales rotos' (1938)?",["Ataques violentos contra judíos, sus negocios y sinagogas en Alemania","Un terremoto en Berlín","Un festival del vidrio","La caída del Muro de Berlín"],0],
+   [5,"¿Qué dictador gobernó España tras la Guerra Civil Española (1936–1939)?",["Francisco Franco","António Salazar","Benito Mussolini","Miguel Primo de Rivera"],0]],
+  [[1,"¿Cómo se llamaba la policía política soviética en los años treinta?",["NKVD","CIA","Gestapo","MI6"],0],
+   [2,"¿Qué hambruna, provocada por la colectivización, afectó gravemente a Ucrania (1932–1933)?",["El Holodomor","La gran hambruna irlandesa","La peste negra","El Dust Bowl"],0],
+   [3,"¿Qué ocurría con las fotografías de los opositores caídos en desgracia con Stalin?",["Se retocaban para borrarlos de la historia","Se exhibían en museos","Se vendían","Se enviaban a EE.UU."],0],
+   [4,"¿Qué estilo artístico oficial impuso el estalinismo?",["El realismo socialista","El impresionismo","El surrealismo","El arte abstracto"],0]]
+ ],
+ h2gm2:[
+  [[1,"¿Qué país anexó Alemania en 1938 (Anschluss)?",["Austria","Polonia","Francia","Suiza"],0],
+   [2,"¿Qué región de Checoslovaquia se entregó a Hitler en Múnich (1938)?",["Los Sudetes","Alsacia","Crimea","Silesia"],0],
+   [3,"¿Qué país invadió Etiopía en 1935?",["La Italia fascista","Japón","Alemania","Francia"],0],
+   [4,"¿Qué región china ocupó Japón en 1931?",["Manchuria","Tíbet","Hong Kong","Taiwán"],0]],
+  [[1,"¿Qué país fue ocupado por Alemania en 1940, con la caída de París?",["Francia","España","Suecia","Portugal"],0],
+   [2,"¿Cómo se llamó la invasión alemana de la URSS en 1941?",["Operación Barbarroja","Operación Overlord","Plan Schlieffen","Operación Tormenta del Desierto"],0],
+   [3,"¿Qué batalla naval de 1942 fue clave para la victoria de EE.UU. en el Pacífico?",["Midway","Trafalgar","Jutlandia","Coronel"],0],
+   [4,"¿Qué ciudad soviética resistió un asedio de casi 900 días?",["Leningrado","Moscú","Kiev","Vladivostok"],0]],
+  [[1,"¿Qué símbolo obligaron los nazis a llevar a los judíos en su ropa?",["Una estrella de David amarilla","Una cruz roja","Un círculo azul","Una media luna"],0],
+   [2,"¿Qué eran los guetos?",["Barrios cerrados donde los nazis encerraron a los judíos","Centros comerciales","Escuelas militares","Hospitales"],0],
+   [3,"¿Qué empresario alemán salvó a más de mil judíos empleándolos en sus fábricas?",["Oskar Schindler","Albert Speer","Joseph Goebbels","Otto Frank"],0],
+   [4,"¿Qué fue el levantamiento del gueto de Varsovia (1943)?",["Una rebelión armada de judíos contra los nazis","Una fiesta popular","Un tratado de paz","Una visita diplomática"],0]],
+  [[1,"¿Qué hizo Hitler en abril de 1945, ante la derrota?",["Se suicidó en su búnker de Berlín","Huyó a la Luna","Fue elegido presidente","Se rindió en Normandía"],0],
+   [2,"¿Qué día terminó la guerra en Europa (Día de la Victoria)?",["8 de mayo de 1945","11 de noviembre de 1918","6 de junio de 1944","1 de septiembre de 1939"],0],
+   [3,"¿Qué presidente de EE.UU. ordenó lanzar las bombas atómicas?",["Harry Truman","Franklin D. Roosevelt","Dwight Eisenhower","John F. Kennedy"],0],
+   [4,"¿Cuándo se rindió Japón?",["En agosto–septiembre de 1945","En 1939","En 1941","En 1950"],0]],
+  [[1,"¿Qué países quedaron como superpotencias tras la guerra?",["Estados Unidos y la URSS","Alemania y Japón","Italia y Francia","Chile y Argentina"],0],
+   [2,"¿Qué diplomático chileno participó en la redacción de la Declaración Universal de los DD.HH.?",["Hernán Santa Cruz","Pablo Neruda","Arturo Alessandri","Andrés Bello"],0],
+   [3,"¿En qué ciudad se firmó la Carta de las Naciones Unidas en 1945?",["San Francisco","Nueva York","Ginebra","Londres"],0],
+   [4,"¿Qué Estado se creó en 1948 en Medio Oriente?",["Israel","Irak","Jordania","Egipto"],0]]
+ ],
+ h2gf:[
+  [[1,"¿Qué sistema político-económico defendía la URSS?",["El comunismo","El capitalismo","El feudalismo","La monarquía absoluta"],0],
+   [2,"¿Qué doctrina de EE.UU. (1947) buscaba contener la expansión del comunismo?",["La Doctrina Truman","La Doctrina Monroe","La Doctrina Brézhnev","La Doctrina Portales"],0],
+   [3,"¿Qué fue la carrera armamentista?",["La competencia por tener más y mejores armas, incluidas las nucleares","Una carrera de atletismo","Un concurso de inventos","Una venta de armas antiguas"],0],
+   [4,"¿Qué idea explicaba que ninguna superpotencia atacara a la otra con armas nucleares?",["La 'destrucción mutua asegurada'","La 'paz perpetua'","El 'equilibrio de Viena'","La 'neutralidad activa'"],0]],
+  [[1,"¿Qué gran país asiático se volvió comunista en 1949 con Mao Zedong?",["China","Japón","India","Filipinas"],0],
+   [2,"¿Quién fue el primer ser humano en pisar la Luna (1969)?",["Neil Armstrong","Yuri Gagarin","John Glenn","Valentina Tereshkova"],0],
+   [3,"¿Qué levantamiento de 1956 contra el dominio soviético fue aplastado por tanques?",["La revolución húngara","La Primavera Árabe","La Revolución de los Claveles","La revolución pingüina"],0],
+   [4,"¿Qué fue la Primavera de Praga (1968)?",["Un intento de reformas en Checoslovaquia aplastado por el Pacto de Varsovia","Un festival de flores","Una revolución en Francia","La caída del Muro de Berlín"],0]],
+  [[1,"¿Qué líder sudafricano pasó 27 años en prisión por luchar contra el apartheid?",["Nelson Mandela","Mahatma Gandhi","Patrice Lumumba","Kofi Annan"],0],
+   [2,"¿Qué país asiático se independizó de los Países Bajos en 1949?",["Indonesia","India","Vietnam","Corea"],0],
+   [3,"¿Contra qué potencia luchó Argelia por su independencia (1954–1962)?",["Francia","Gran Bretaña","Bélgica","Portugal"],0],
+   [4,"¿Qué conferencia de 1955 reunió a países asiáticos y africanos recién independizados?",["La Conferencia de Bandung","La Conferencia de Yalta","La Conferencia de Berlín","La Conferencia de Potsdam"],0]],
+  [[1,"¿Qué isla del Caribe se alió con la URSS tras 1959?",["Cuba","Jamaica","Puerto Rico","República Dominicana"],0],
+   [2,"¿Qué presidente guatemalteco fue derrocado en 1954 con apoyo de la CIA?",["Jacobo Árbenz","Fidel Castro","Juan Perón","Getúlio Vargas"],0],
+   [3,"¿Qué escuela de EE.UU. en Panamá formó a militares latinoamericanos?",["La Escuela de las Américas","La Universidad de Harvard","La Escuela Militar de Chile","El MIT"],0],
+   [4,"¿Qué países sudamericanos tuvieron dictaduras militares en los años setenta?",["Chile, Argentina, Uruguay, Brasil, Paraguay y Bolivia","Solo Venezuela","Solo Colombia","Ninguno"],0]],
+  [[1,"¿Qué presidente de EE.UU. dijo en Berlín: 'Señor Gorbachov, derribe este muro'?",["Ronald Reagan","Bill Clinton","Richard Nixon","Jimmy Carter"],0],
+   [2,"¿Qué alianza militar comunista se disolvió en 1991?",["El Pacto de Varsovia","La OTAN","La Unión Europea","La ONU"],0],
+   [3,"¿Qué guerra (1979–1989) desgastó a la URSS en Asia central?",["La invasión soviética de Afganistán","La Guerra de Corea","La Guerra del Golfo","La Guerra de los Seis Días"],0],
+   [4,"¿Qué país fue el principal sucesor de la URSS?",["Rusia (Federación de Rusia)","Ucrania","Polonia","Mongolia"],0]]
+ ],
+ h2up:[
+  [[1,"¿Qué presidente murió en La Moneda el 11 de septiembre de 1973?",["Salvador Allende","Eduardo Frei Montalva","Pedro Aguirre Cerda","Patricio Aylwin"],0],
+   [2,"¿Con qué porcentaje aproximado ganó Allende la elección de 1970?",["Cerca del 36%","El 80%","El 100%","El 10%"],0],
+   [3,"¿Quién ratificó la elección de Allende en 1970, al no obtener mayoría absoluta?",["El Congreso Pleno","La Corte Suprema","Las Fuerzas Armadas","Estados Unidos"],0],
+   [4,"¿Qué comandante en jefe del Ejército fue asesinado en 1970 en un intento por impedir que Allende asumiera?",["René Schneider","Carlos Prats","Augusto Pinochet","Gustavo Leigh"],0]],
+  [[1,"¿Qué instituciones integraron la Junta Militar?",["El Ejército, la Armada, la Fuerza Aérea y Carabineros","Solo el Ejército","Bomberos y el Ejército","La Marina Mercante y Carabineros"],0],
+   [2,"¿Qué fue el 'Tanquetazo' de junio de 1973?",["Un intento fallido de golpe de Estado","Un desfile militar","Una marcha estudiantil","Una huelga de camioneros"],0],
+   [3,"¿Qué comandante en jefe del Ejército, leal a la Constitución, renunció en agosto de 1973?",["Carlos Prats","Augusto Pinochet","Manuel Contreras","René Schneider"],0],
+   [4,"¿Qué radio transmitió el último discurso de Allende el 11 de septiembre?",["Radio Magallanes","Radio Cooperativa","Radio Bío-Bío","Radio Agricultura"],0]],
+  [[1,"¿Cuántos años duró la dictadura militar en Chile?",["Cerca de 17 años (1973–1990)","2 años","50 años","6 meses"],0],
+   [2,"¿Qué medida restringió la circulación nocturna durante gran parte de la dictadura?",["El toque de queda","La ley seca","El horario de verano","La restricción vehicular"],0],
+   [3,"¿Qué ocurrió con los partidos políticos tras el golpe?",["Fueron prohibidos o declarados en receso","Se multiplicaron","Gobernaron junto a la Junta","No cambiaron"],0],
+   [4,"¿Qué organismo reemplazó a la DINA en 1977?",["La CNI (Central Nacional de Informaciones)","La PDI","El SERNAC","La CIA"],0],
+   [5,"¿Qué ex ministro de Allende fue asesinado en Washington en 1976 por agentes de la DINA?",["Orlando Letelier","Carlos Prats","Pablo Neruda","Radomiro Tomic"],0]],
+  [[1,"¿Qué agrupación formaron familiares de víctimas para buscar a sus seres queridos?",["La Agrupación de Familiares de Detenidos Desaparecidos","La CORFO","El Servel","La FIFA"],0],
+   [2,"¿Qué es el exilio?",["La expulsión o salida forzada de una persona de su país","Un viaje de vacaciones","Una beca de estudios","Un ascenso laboral"],0],
+   [3,"¿Qué cantautor fue asesinado tras ser detenido en el Estadio Chile en septiembre de 1973?",["Víctor Jara","Violeta Parra","Ángel Parra","Patricio Manns"],0],
+   [4,"¿Qué hallazgo de 1978 en unos hornos de cal reveló restos de detenidos desaparecidos?",["Los hornos de Lonquén","La mina Chuquicamata","El pique de Lota","La oficina Humberstone"],0]],
+  [[1,"¿Qué se llamó 'milagro económico' durante la dictadura?",["El crecimiento de fines de los setenta, acompañado de gran desigualdad","El fin total de la pobreza","El descubrimiento de petróleo","El regreso del salitre"],0],
+   [2,"¿Con qué apodo se conoce el documento económico de los Chicago boys?",["'El ladrillo'","'El capital'","'La pizarra'","'El cuaderno'"],0],
+   [3,"¿Qué ocurrió con la reforma agraria durante la dictadura?",["Se revirtió en parte: muchas tierras volvieron a manos privadas","Se profundizó","Se entregó toda la tierra a las comunidades mapuche","No cambió"],0],
+   [4,"¿Qué cambio de 1981 transformó la educación superior?",["Se permitió la creación de universidades privadas","Se cerraron todas las universidades","Se hizo gratuita toda la educación superior","Se prohibió estudiar en el extranjero"],0]]
+ ]
+};
+var NEWCAT={
+ h2gm1:[["Batallas y personajes","⚔️",[
+  [1,"¿Cómo se llamaba a la Primera Guerra Mundial en su época?",["La Gran Guerra","La Guerra Fría","La Guerra de los Cien Años","La Guerra Relámpago"],0],
+  [2,"¿Qué batalla de 1914 detuvo el avance alemán hacia París?",["La batalla del Marne","La batalla de Waterloo","La batalla de Stalingrado","La batalla de Lepanto"],0],
+  [2,"¿Qué transatlántico hundió un submarino alemán en 1915, indignando a EE.UU.?",["El Lusitania","El Titanic","La Esmeralda","El Huáscar"],0],
+  [3,"¿Qué campaña aliada de 1915 en Turquía terminó en fracaso?",["Galípoli","Normandía","Pearl Harbor","Stalingrado"],0],
+  [3,"¿Qué piloto alemán fue llamado 'el Barón Rojo'?",["Manfred von Richthofen","Erwin Rommel","Otto von Bismarck","Hermann Göring"],0],
+  [4,"¿Contra qué imperio apoyó 'Lawrence de Arabia' una rebelión árabe?",["El Imperio otomano","El Imperio ruso","Francia","Japón"],0],
+  [4,"¿Qué tratado firmó la Rusia bolchevique con Alemania en 1918 para salir de la guerra?",["El Tratado de Brest-Litovsk","El Tratado de Versalles","El Tratado de Ancón","El Tratado de Roma"],0],
+  [5,"¿Qué ofensiva de 1918 fue el último gran intento alemán de ganar la guerra?",["La Ofensiva de Primavera","La Operación Barbarroja","El Día D","La Ofensiva del Tet"],0]]]]
+};
+var NEWTOPIC={id:"h2rus",name:"Revolución Rusa",icon:"☭",tag:"2° Medio · Unidad 1",desc:"La Rusia de los zares · revolución de febrero · revolución de octubre · guerra civil y URSS · personajes y legado",cats:[
+ ["La Rusia de los zares","👑",[
+  [1,"¿Qué título tenía el emperador de Rusia?",["Zar","Káiser","Faraón","Shogún"],0],
+  [1,"¿Cuál era la capital del Imperio ruso en 1917?",["Petrogrado (San Petersburgo)","Moscú","Kiev","Varsovia"],0],
+  [2,"¿Qué tipo de gobierno tenía Rusia antes de 1905?",["Una autocracia (monarquía absoluta)","Una república democrática","Una monarquía parlamentaria","Una dictadura militar elegida"],0],
+  [2,"¿Qué grupo social era la gran mayoría de la población rusa?",["Los campesinos","Los obreros industriales","Los nobles","Los comerciantes"],0],
+  [3,"¿En qué año se abolió la servidumbre en Rusia?",["1861","1917","1789","1905"],0],
+  [3,"¿Qué ocurrió el 'Domingo Sangriento' de 1905?",["Tropas del zar dispararon contra una manifestación pacífica de obreros","El zar fue asesinado","Rusia ganó una guerra","Se inauguró el Transiberiano"],0],
+  [4,"¿Qué guerra perdió Rusia en 1905, debilitando al zar?",["La guerra ruso-japonesa","La Primera Guerra Mundial","La Guerra de Crimea","La Guerra Fría"],0],
+  [4,"¿Qué parlamento creó el zar tras la revolución de 1905?",["La Duma","El Sóviet Supremo","El Bundestag","Las Cortes"],0],
+  [5,"¿Qué místico con gran influencia sobre la familia del zar fue asesinado en 1916?",["Rasputín","Trotsky","Kérenski","Stolypin"],0],
+  [5,"¿Qué ferrocarril, iniciado en 1891, unió Moscú con el océano Pacífico?",["El Transiberiano","El Orient Express","El Ferrocarril de Arica a La Paz","El Eurostar"],0]]],
+ ["Revolución de febrero","🔥",[
+  [1,"¿En qué año cayó el zar Nicolás II?",["1917","1905","1922","1945"],0],
+  [2,"¿Qué guerra agravó el hambre y el descontento en Rusia antes de 1917?",["La Primera Guerra Mundial","La Segunda Guerra Mundial","La Guerra del Pacífico","La Guerra de Vietnam"],0],
+  [2,"¿Qué hizo Nicolás II en marzo de 1917 (febrero según el calendario ruso)?",["Abdicó","Ganó la guerra","Se unió a los bolcheviques","Huyó a América"],0],
+  [3,"¿Qué gobierno se formó tras la caída del zar?",["Un Gobierno Provisional","Una monarquía constitucional","Una dictadura bolchevique inmediata","Un gobierno militar extranjero"],0],
+  [3,"¿Qué eran los sóviets?",["Consejos de obreros, soldados y campesinos","Tanques rusos","Iglesias ortodoxas","Bancos estatales"],0],
+  [3,"¿Cómo volvió Lenin a Rusia en 1917 desde su exilio en Suiza?",["En un tren sellado facilitado por Alemania","En avión","Caminando por Siberia","En un barco chileno"],0],
+  [4,"¿Qué líder encabezó el Gobierno Provisional a mediados de 1917?",["Aleksandr Kérenski","Lenin","Stalin","Nicolás II"],0],
+  [4,"¿Por qué el Gobierno Provisional perdió apoyo?",["Porque siguió en la guerra y no resolvió el problema de la tierra","Porque terminó la guerra de inmediato","Porque repartió toda la tierra","Porque bajó el precio del pan"],0],
+  [5,"¿Qué se conoce como 'doble poder' en 1917?",["La convivencia del Gobierno Provisional con el Sóviet de Petrogrado","Dos zares gobernando a la vez","La alianza entre Rusia y Alemania","Un gobierno con dos capitales"],0],
+  [5,"¿Qué documento de Lenin de abril de 1917 pedía 'todo el poder a los sóviets'?",["Las Tesis de Abril","El Manifiesto comunista","El capital","Los 14 puntos"],0]]],
+ ["Revolución de octubre","☭",[
+  [1,"¿Quién lideró la Revolución de octubre de 1917?",["Lenin","Nicolás II","Kérenski","Gorbachov"],0],
+  [1,"¿Qué símbolos identificaron a la revolución comunista?",["La bandera roja, la hoz y el martillo","La bandera blanca y la flor de lis","El águila bicéfala dorada","Una corona y un cetro"],0],
+  [2,"¿Qué edificio tomaron los bolcheviques en Petrogrado, sede del Gobierno Provisional?",["El Palacio de Invierno","El Kremlin","La Casa Blanca","El Palacio de Versalles"],0],
+  [2,"¿Qué buque disparó una salva que se volvió símbolo de la revolución?",["El crucero Aurora","El Titanic","El Lusitania","El Huáscar"],0],
+  [3,"¿Qué decretos aprobaron los bolcheviques apenas tomaron el poder?",["El decreto sobre la paz y el decreto sobre la tierra","Un decreto que restauraba la monarquía","Un decreto de privatización","Un decreto de libre mercado"],0],
+  [3,"¿Qué hicieron los bolcheviques con la Asamblea Constituyente en 1918?",["La disolvieron porque no tenían mayoría","Le entregaron el poder","La convirtieron en tribunal","La trasladaron a París"],0],
+  [4,"¿Por qué la revolución ocurrió en noviembre pero se llama 'de octubre'?",["Porque Rusia usaba el calendario juliano, atrasado 13 días","Por un error de los historiadores","Porque duró dos meses","Porque comenzó en Alemania"],0],
+  [4,"¿Qué nuevo nombre tomó el partido bolchevique en 1918?",["Partido Comunista","Partido Liberal","Partido Laborista","Partido Conservador"],0],
+  [5,"¿Qué policía política creó el régimen bolchevique en 1917?",["La Cheka","La Gestapo","La DINA","El FBI"],0],
+  [5,"¿A qué ciudad trasladaron los bolcheviques la capital en 1918?",["Moscú","Kiev","Minsk","Odesa"],0]]],
+ ["Guerra civil y nacimiento de la URSS","⚔️",[
+  [1,"¿Cómo se llamaba el ejército bolchevique?",["El Ejército Rojo","El Ejército Blanco","La Wehrmacht","La Legión Extranjera"],0],
+  [2,"¿Quiénes eran los 'blancos' en la guerra civil rusa?",["Los opositores a los bolcheviques (zaristas, liberales y otros)","Los comunistas","Los campesinos neutrales","Los soldados japoneses"],0],
+  [2,"¿Qué ocurrió con el zar Nicolás II y su familia en 1918?",["Fueron ejecutados por los bolcheviques","Huyeron a Inglaterra","Volvieron al trono","Se hicieron comunistas"],0],
+  [3,"¿Quién organizó el Ejército Rojo?",["León Trotsky","Kérenski","Rasputín","Nicolás II"],0],
+  [3,"¿Qué política económica aplicaron los bolcheviques en la guerra civil, requisando alimentos?",["El comunismo de guerra","La Nueva Política Económica","El New Deal","Los planes quinquenales"],0],
+  [3,"¿En qué año se fundó la URSS?",["1922","1917","1945","1991"],0],
+  [4,"¿Qué política de 1921 permitió cierto comercio privado para recuperar la economía?",["La NEP (Nueva Política Económica)","El comunismo de guerra","La colectivización","La perestroika"],0],
+  [4,"¿Qué rebelión de marinos de 1921 fue reprimida por los bolcheviques?",["La rebelión de Kronstadt","El motín del Potemkin","La rebelión de los cipayos","La rebelión de Túpac Amaru"],0],
+  [5,"¿Qué organización creó Lenin en 1919 para promover la revolución en el mundo?",["La Internacional Comunista (Komintern)","La ONU","La OTAN","La Cruz Roja"],0],
+  [5,"¿Qué países extranjeros intervinieron en la guerra civil rusa contra los bolcheviques?",["Gran Bretaña, Francia, EE.UU. y Japón, entre otros","Chile y Argentina","Ninguno","Solo la Alemania nazi"],0]]],
+ ["Personajes y legado","🎖️",[
+  [1,"¿Qué superpotencia, nacida de la revolución, se enfrentaría luego a EE.UU. en la Guerra Fría?",["La URSS","La China imperial","El Imperio austrohúngaro","Japón"],0],
+  [1,"¿Cuál era el nombre real de Lenin?",["Vladímir Ilich Uliánov","Iósif Dzhugashvili","Lev Bronstein","Nikita Jruschov"],0],
+  [2,"¿En qué año murió Lenin?",["1924","1917","1953","1991"],0],
+  [2,"¿Qué ideología inspiró a los bolcheviques?",["El marxismo","El liberalismo","El fascismo","El conservadurismo"],0],
+  [3,"¿Qué le ocurrió a Trotsky tras perder la lucha por el poder con Stalin?",["Fue expulsado y asesinado en México en 1940","Fue elegido presidente","Se convirtió en zar","Se retiró a Chile"],0],
+  [3,"¿Qué significa 'dictadura del proletariado' en la teoría marxista?",["Un período en que la clase obrera ejerce el poder para construir el socialismo","Un gobierno de reyes","Una democracia liberal","El poder de la burguesía"],0],
+  [4,"¿Qué impacto tuvo la Revolución Rusa en Chile?",["Inspiró la transformación del Partido Obrero Socialista en Partido Comunista (1922)","Provocó la Guerra del Pacífico","Creó la CORFO","No tuvo ningún impacto"],0],
+  [4,"¿Por qué la Revolución Rusa generó temor en los gobiernos capitalistas?",["Temían que la revolución comunista se extendiera a sus países","Porque Rusia invadió América","Porque prohibió el comercio mundial","Porque bajó el precio del trigo"],0],
+  [5,"¿Qué película soviética de 1925, de Eisenstein, retrata un motín de marinos de 1905?",["El acorazado Potemkin","Lo que el viento se llevó","Titanic","Tiempos modernos"],0],
+  [5,"¿Qué significa 'sóviet' en ruso?",["Consejo","Ejército","Emperador","Pan"],0]]]
+],top5:[
+ ["Personajes de la Revolución Rusa ☭",["Lenin","Trotsky","Nicolás II","Stalin","Kérenski"],"Rasputín, la zarina Alejandra, Kámenev, Zinóviev, Aleksandra Kolontái"],
+ ["Causas de la Revolución Rusa 🔥",["hambre","guerra","pobreza campesina","autoritarismo del zar","descontento obrero"],"derrotas militares, Domingo Sangriento, desigualdad, falta de tierras"]]};
+
+function find(id){return (window.HIST1||[]).concat(window.HIST2||[]).filter(function(t){return t.id===id;})[0];}
+Object.keys(ADD).forEach(function(id){var t=find(id);if(!t)return;ADD[id].forEach(function(qs,i){if(t.cats[i])t.cats[i].q=t.cats[i].q.concat(qs);});});
+Object.keys(NEWCAT).forEach(function(id){var t=find(id);if(!t)return;NEWCAT[id].forEach(function(c){t.cats.push({id:id+'_'+t.cats.length,name:c[0],icon:c[1],q:c[2]});});});
+var R=NEWTOPIC;R.cats=R.cats.map(function(c,i){return {id:R.id+'_'+i,name:c[0],icon:c[1],q:c[2]};});
+var H=window.HIST2||[],k=0;for(;k<H.length;k++)if(H[k].id==='h2gm1')break;H.splice(k+1,0,R);
+})();
