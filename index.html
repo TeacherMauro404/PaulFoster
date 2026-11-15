@@ -432,7 +432,7 @@ function mixTab(){var t=S.lastTab||'g1';sideKeys().forEach(function(k){if(S.mix.
 function clearMix(){S.mix=[];applyMix();}
 var S={bank:(ORDER.g1[0]||'general'),game:'board',teams:[],cats:BANKS[ORDER.g1[0]||'general'].cats.map(function(c){return c.id;}),lv:'all',time:30,turn:0,speed:true,mix:[],lastTab:'g1',sound:true};var LOG=[];
 try{var sv=JSON.parse(localStorage.getItem('hist_games')||'null');if(sv){S.teams=sv.teams||[];if(sv.bank)S.bank=sv.bank;S.lv=sv.lv||S.lv;S.time=sv.time!=null?sv.time:S.time;S.turns=sv.turns||0;if(sv.speed!=null)S.speed=sv.speed;if(sv.sound!=null)S.sound=sv.sound;if(sv.mix)S.mix=sv.mix;if(sv.cats&&sv.cats.length)S.cats=sv.cats;}}catch(e){}
-if(S.teams.length<2)S.teams=[{name:'Tigers',emoji:'🐯'},{name:'Unicorns',emoji:'🦄'}];
+if(S.teams.length<2)S.teams=[{name:'Los Próceres',emoji:'🏛️'},{name:'Los Cartógrafos',emoji:'🗺️'}];
 function save(){try{localStorage.setItem('hist_games',JSON.stringify({teams:S.teams.map(function(t){return {name:t.name,emoji:t.emoji};}),lv:S.lv,time:S.time,turns:S.turns||0,cats:S.cats,bank:S.bank,speed:S.speed,sound:S.sound,mix:S.mix}));}catch(e){}}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
