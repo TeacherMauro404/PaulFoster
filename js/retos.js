@@ -148,7 +148,7 @@ var CH={cur:null,dbl:{},
     else if(ch.type==='order'){h+='<div class="chipsw" id="ow" style="justify-content:center">'+ch.words.map(function(w,i){return '<button class="w" data-k="'+i+'" onclick="CH.ow(this)">'+esc(w)+'</button>';}).join('')+'</div><div class="built" id="ob"></div>';}
     else if(ch.type==='tf'){h+='<div id="tfbox"></div>';}
     else if(ch.type==='who'){h+='<div id="whobox">'+CH.whoHtml(ch)+'</div><div class="secret" id="secret"></div>';}
-    else if(ch.type==='speak'){h+='<div class="qtext">🎤 '+esc(ch.p)+'</div>'+(ch.topic?'<p style="text-align:center;font-weight:800;color:#a66bff">Tema: '+esc(ch.topic)+'</p>':'');}
+    else if(ch.type==='speak'){h+='<div class="qtext">🎤 '+esc(ch.p)+'</div>'+(ch.topic?'<p style="text-align:center;font-weight:800;color:#6b4a8a">Tema: '+esc(ch.topic)+'</p>':'');}
     else if(ch.type==='mime'||ch.type==='draw'){h+='<div class="secret" id="secret"><button class="btn" onclick="CH.peek()">👀 Ver la palabra (solo el '+(ch.type==='mime'?'actor':'dibujante')+')</button></div>';}
     else if(ch.type==='spell'){h+='<div style="text-align:center"><button class="btn big" onclick="say(CH.cur.w)">🔊 Escuchar la palabra</button><div class="secret" id="secret" style="margin-top:12px"><button class="btn sec" onclick="CH.show()">👁 Mostrar la palabra</button></div></div>';}
     else if(ch.type==='twister'){h+='<div class="qtext">😜 '+esc(ch.w)+'</div><div style="text-align:center"><button class="spk" onclick="say(CH.cur.w)">🔊 Escuchar</button></div>';}
