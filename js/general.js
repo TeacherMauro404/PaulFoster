@@ -15,9 +15,9 @@ window.HGENERAL = [
   [5,"Fui el 'canciller de hierro' y unifiqué Alemania en 1871. ¿Quién soy?",["Otto von Bismarck","Guillermo II","Federico el Grande","Konrad Adenauer"],0],
   [5,"Fui abogada, fundé el MEMCH y luché por el voto femenino en Chile. ¿Quién soy?",["Elena Caffarena","María de la Cruz","Eloísa Díaz","Marta Brunet"],0]]},
 { id:"g_date", name:"Fechas clave", icon:"📅", q:[
-  [1,"¿Qué se conmemora en Chile el 18 de septiembre?",["La Primera Junta Nacional de Gobierno (1810)","La Batalla de Maipú","El Día del Trabajador","El fin de la dictadura"],0],
+  [1,"¿Qué se conmemora en Chile el 18 de septiembre?",["La Primera Junta Nacional de Gobierno (1810)","La firma del Acta de Independencia (1818)","La Batalla de Chacabuco (1817)","La llegada de Pedro de Valdivia (1541)"],0],
   [2,"¿Qué comenzó en 1789?",["La Revolución Francesa","La Segunda Guerra Mundial","La Guerra Fría","La independencia de Chile"],0],
-  [2,"¿Qué ocurrió en 1945?",["Terminó la Segunda Guerra Mundial y se creó la ONU","Comenzó la Primera Guerra Mundial","Ocurrió el golpe de Estado en Chile","Llegó el ser humano a la Luna"],0],
+  [2,"¿Qué ocurrió en 1945?",["Terminó la Segunda Guerra Mundial y se creó la ONU","Comenzó la Guerra Fría con la construcción del Muro de Berlín","Terminó la Primera Guerra Mundial y se firmó el Tratado de Versalles","Se fundó la Sociedad de Naciones y comenzó la crisis económica"],0],
   [3,"¿En qué año llegó el ser humano a la Luna?",["1969","1957","1989","1945"],0],
   [3,"¿Cuál de estos hechos ocurrió PRIMERO?",["La Revolución Industrial","La Primera Guerra Mundial","La crisis de 1929","La Guerra Fría"],0],
   [4,"¿Cuál de estos hechos ocurrió ÚLTIMO?",["La caída del Muro de Berlín","La Revolución Rusa","Las bombas de Hiroshima","La Revolución Cubana"],0],
@@ -56,7 +56,7 @@ window.HGENERAL = [
   [3,"¿En qué barco viajó Charles Darwin, que recorrió Chile en la década de 1830?",["El HMS Beagle","El Titanic","La Esmeralda","El Mayflower"],0],
   [3,"¿Qué famoso transatlántico se hundió en 1912?",["El Titanic","El Lusitania","El Huáscar","La Santa María"],0],
   [4,"¿Cómo se llamaba uno de los primeros computadores electrónicos (1945)?",["ENIAC","iPhone","Commodore 64","Macintosh"],0],
-  [4,"¿Qué francés se autoproclamó 'rey de la Araucanía y la Patagonia' en 1860?",["Orélie-Antoine de Tounens","Napoleón III","Julio Verne","Louis Pasteur"],0],
+  [4,"¿Qué francés se autoproclamó 'rey de la Araucanía y la Patagonia' en 1860?",["Orélie-Antoine de Tounens","Claude Gay de Lyon","Ignacio Domeyko Ancuta","Aquinas Ried de Lorena"],0],
   [5,"¿Qué médica chilena fue la primera mujer en titularse de médica en Sudamérica (1887)?",["Eloísa Díaz","Ernestina Pérez","Gabriela Mistral","Amanda Labarca"],0]]}
 ];
 window.HGENERAL_T5 = [
